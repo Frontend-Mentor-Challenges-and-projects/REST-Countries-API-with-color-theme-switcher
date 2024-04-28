@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1987201f0c.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+    <header>
+        <h1 class="header__title">Where in the world?</h1>
+
+        <a href="#" class="header__dark--index">
+            <i class="fa-regular fa-moon fa-xl header__dark__img"></i>
+            <p class="header__dark__title">Dark Mode</p>
+        </a>
+    </header>
+
+    <main>
+        <nav class="nav">
+            <div class="search">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass search__img"></i>
+                </a>
+
+                <input class="search__input" type="text" placeholder="Search for a county...">
+            </div>
+
+            <details>
+                <summary class="filter">
+                    <span class="filter__info">Filter by Region</span>
+                    <i class="fa-solid fa-angle-down filter__img"></i>
+                </summary>
+
+                <div class="contents">
+                    <a class="contents__region contents__region--africa" href="#">Africa</a>
+                    <a class="contents__region contents__region--america" href="#">America</a>
+                    <a class="contents__region contents__region--asia" href="#">Asia</a>
+                    <a class="contents__region contents__region--europe" href="#">Europe</a>
+                    <a class="contents__region contents__region--oceania" href="#">Oceania</a>
+                </div>
+            </details>
+        </nav>
+
+        <secion class="countries">
+        </secion>
+
+
+
+
+    </main>
+
+    <div class="attribution">
+        Challenge by <a class="attribution__info" href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank">Frontend Mentor</a>.
+        Coded by <a class="attribution__info" href="https://github.com/Frontend-Mentor-Challenges-and-projects"
+            target="_blank">Mustafa Ali</a>.
+    </div>
+
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
