@@ -216,6 +216,13 @@ summary {
 }
 
 @media (max-width: 375px) {
+
+  .country:hover {
+    transition: all 0;
+    transform: scale(0);
+    cursor: auto;
+  }
+  
   header {
     align-items: center;
     justify-content: center;
