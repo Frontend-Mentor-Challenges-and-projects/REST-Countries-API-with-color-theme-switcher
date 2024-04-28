@@ -66,7 +66,10 @@ const darkModeIndex = function () {
 }
 
 if (darkIndex)
-    darkIndex.addEventListener('click', darkModeIndex);
+    darkIndex.addEventListener('click', (e) => {
+        e.preventDefault();
+        darkModeIndex()
+    });
 
 
 
@@ -89,7 +92,10 @@ const DarkModeCountry = function () {
 };
 
 if (darkCountry)
-    darkCountry.addEventListener('click', DarkModeCountry);
+    darkCountry.addEventListener('click', (e) => {
+        e.preventDefault();
+        DarkModeCountry();
+    });
 
 
 //Display Countries:
