@@ -38,7 +38,8 @@ const backIcon = document.querySelector('.back__img');
 const backInfo = document.querySelector('.back__info');
 const nation = document.querySelector('.nation');
 const card = document.querySelector('.card');
-const cardInfo = document.querySelectorAll('.card__info ');
+const cardInfo = document.getElementsByClassName('card__info ');
+const cardInput = document.getElementsByClassName('card__input ');
 const neighbor = document.getElementsByClassName('neighbor');
 const neighborCountry = document.querySelectorAll('.neighbor__country');
 
@@ -78,7 +79,8 @@ const DarkModeCountry = function () {
 
     [headerTitle, headerDarkTitle, headerDarkIcon, backIcon, backInfo, attribution].forEach(el => el.classList.toggle('darkMode--white'));
 
-    cardInfo.forEach(info => info.classList.toggle('darkMode--white'));
+    [...cardInfo].forEach(info => info.classList.toggle('darkMode--white'));
+    [...cardInput].forEach(info => info.classList.toggle('darkMode--white'));
     neighborCountry.forEach(country => country.classList.toggle('darkMode--dark'));
 
     neighborCountry.forEach(function (el) {
@@ -94,7 +96,6 @@ if (darkCountry)
 //Display Countries:
 let capitalCity, nativeNameCommon;
 
-// 'https://restcountries.com/v3.1/all'
 
 const displayCountries = function (url) {
 
@@ -212,18 +213,6 @@ if (countries) {
 
 
 
-//////////////////////////////////////
-//Clicking on a country:
-
-// setTimeout(function () {
-//     [...country].forEach(function (cnt) {
-//         cnt.addEventListener('click', function () {
-//             console.log(cnt.childNodes[3].textContent);
-//         })
-//     })
-
-// }, 2000);
-
 
 
 
@@ -331,24 +320,18 @@ const displayClickedCountry = function () {
 
                 nation.insertAdjacentHTML('afterbegin', html);
 
-                borders.forEach(function (cnt) {
+                if (borders) {
+                    borders.forEach(function (cnt) {
 
-                    const htmlBorder = `
+                        const htmlBorder = `
                                 
                                     <div class="neighbor__country">
                                        ${cnt}
                                     </div>
                                 `;
-                    [...neighbor].forEach(el => el.insertAdjacentHTML('beforeend', htmlBorder))
-                });
-
-                // <div class="neighbor">
-                //     <div class="neighbor__country">
-                //         Poland
-                //     </div>
-
-                // </div>
-
+                        [...neighbor].forEach(el => el.insertAdjacentHTML('beforeend', htmlBorder))
+                    });
+                }
 
             }
             )
