@@ -41,7 +41,7 @@ const card = document.querySelector('.card');
 const cardInfo = document.getElementsByClassName('card__info ');
 const cardInput = document.getElementsByClassName('card__input ');
 const neighbor = document.getElementsByClassName('neighbor');
-const neighborCountry = document.querySelectorAll('.neighbor__country');
+const neighborCountry = document.getElementsByClassName('neighbor__country');
 
 
 
@@ -81,9 +81,8 @@ const DarkModeCountry = function () {
 
     [...cardInfo].forEach(info => info.classList.toggle('darkMode--white'));
     [...cardInput].forEach(info => info.classList.toggle('darkMode--white'));
-    neighborCountry.forEach(country => country.classList.toggle('darkMode--dark'));
 
-    neighborCountry.forEach(function (el) {
+    [...neighborCountry].forEach(function (el) {
         el.classList.toggle('darkMode--dark');
         el.classList.toggle('darkMode--text');
     });
