@@ -219,7 +219,7 @@ summary {
 
   .country:hover {
     transition: all 0;
-    transform: scale(0);
+    transform: scale(1);
     cursor: auto;
   }
   
