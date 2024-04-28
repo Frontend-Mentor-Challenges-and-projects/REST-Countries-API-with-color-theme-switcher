@@ -218,7 +218,7 @@ summary {
 @media (max-width: 375px) {
 
   .country:hover {
-    transition: all 0;
+    transition: all 0s;
     transform: scale(1);
     cursor: auto;
   }
